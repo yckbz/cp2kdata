@@ -3,7 +3,7 @@ import numpy as np
 
 ENERGIES_RE = re.compile(
     r"""
-    \sENERGY\|\sTotal\sFORCE_EVAL\s\(\sQS\s\)\senergy\s\S{6}:\s+(?P<energy>[\s-]\d+\.\d+)
+    \sENERGY\|\sTotal\sFORCE_EVAL\s\(\sQS\s\)\senergy\s\[.+?\]:?\s+(?P<energy>[\d\.\-\+E]+)
     """,
     re.VERBOSE
 )
