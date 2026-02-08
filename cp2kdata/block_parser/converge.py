@@ -7,10 +7,9 @@ from monty.re import regrep
 class ConvergeInfo:
     converge: bool = False
 
-
 CONVERGE_PATTERN = \
     r"""(?xm)
-    ^\s{1,2}\*\*\*\sSCF\srun\sconverged\sin
+    ^\s*\*\*\*\sSCF\srun\sconverged\sin
     """
 
 
