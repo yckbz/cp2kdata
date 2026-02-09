@@ -3,9 +3,11 @@ import numpy as np
 
 ENERGIES_RE = re.compile(
     r"""
-    \sENERGY\|\sTotal\sFORCE_EVAL\s\(\sQS\s\)\senergy\s\[.+?\]:?\s+(?P<energy>[\d\.\-\+E]+)
+    ^\s*ENERGY\|\s+Total\s+FORCE_EVAL\s+\(\s*QS\s*\)\s+energy
+    (?:\s+[\[\(][^\]\)]+[\]\)])?
+    \s*:?\s+(?P<energy>[-+]?\d+\.\d+(?:[Ee][+-]?\d+)?)
     """,
-    re.VERBOSE
+    re.VERBOSE | re.MULTILINE
 )
 
 
